@@ -1,0 +1,27 @@
+{
+  "name": "cai-blog",
+  "version": "1.0.0",
+  "description": "a blog belong to caixiaocong",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caistrong/cai-blog.git"
+  },
+  "keywords": [
+    "blog",
+    "vue2",
+    "koa2"
+  ],
+  "author": "caixiaocong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caistrong/cai-blog/issues"
+  },
+  "homepage": "https://github.com/caistrong/cai-blog#readme",
+  "dependencies": {
+    "koa-router": "^7.2.1"
+  }
+}
