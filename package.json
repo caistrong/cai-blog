@@ -22,7 +22,19 @@
   },
   "homepage": "https://github.com/caistrong/cai-blog#readme",
   "dependencies": {
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.1.0",
+    "koa-onerror": "^3.1.0",
     "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "moment": "^2.19.1",
     "mongoose": "^4.12.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
   }
 }
