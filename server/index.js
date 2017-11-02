@@ -6,6 +6,8 @@ import config from './configs';
 import router from './routes';
 import onerror from 'koa-onerror';
 import path from 'path';
+
+import cors from 'koa2-cors';
 //koa-onerror will automatic set err.status as response status code,
 //and err.headers as response headers.
 
@@ -26,6 +28,8 @@ const app = new koa();
 app.use(middleware());
 onerror(app);
 
+//允许跨域
+app.use(cors());
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = '../client/static';
 
