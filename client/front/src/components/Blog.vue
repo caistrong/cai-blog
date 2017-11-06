@@ -1,18 +1,18 @@
 <template>
     <div>
         <Sidebar class="sidebar"></Sidebar>
-        <Content class="content"></Content>
+        <Articlelist class="articlelist"></Articlelist>
     </div>
 </template>
 <script>
 import Sidebar from './smallcomponents/Sidebar.vue'
-import Content from './smallcomponents/Content.vue'
+import Articlelist from './smallcomponents/Articlelist.vue'
 
 export default {
   name:'Blog',
   components:{
       Sidebar,
-      Content
+      Articlelist
   }
 }
 </script>

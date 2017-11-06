@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import About from '@/components/About'
 import Blog from '@/components/Blog'
+import Article from '@/components/Article'
 //大坑！！！！！
 //如果这个文件中有一些组件未import或者
 //import出现错误，那有很大概率显示一片空白并且不报错
@@ -23,7 +24,11 @@ export default new Router({
     {
       path: '/Blog',
       name:'Blog',
-      component: Blog
+      component: Blog,
+    },{
+      path:'/Article/:id',
+      name:'Article',
+      component: Article
     }
   ]
 })

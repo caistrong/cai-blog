@@ -6,6 +6,7 @@ class ArticleController{
     //将方法前面写成async是因为这个方法中有IO操作，用异步性能更佳
     static async postArticle(ctx){
         const title = ctx.request.body.title;
+        const summary = ctx.request.body.summary;
         const content = ctx.request.body.content;
         const publish = ctx.request.body.publish;
         const createTime = new Date();//当前时间
@@ -21,6 +22,7 @@ class ArticleController{
         const article = new ArticleModel({
             title,
             content,
+            summary,
             publish,
             createTime
         })
@@ -53,6 +55,39 @@ class ArticleController{
         ctx.body = {
             success:true,
             articleArr
+        }
+    }
+
+    static async getArticle(ctx){
+        const id = ctx.params.id;
+        console.log(id)
+        if(id==''){
+            ctx.throw(400,'id不能为空')
+        }
+        const article = await ArticleModel.findById(id).catch(err=>{
+            if(err.name === 'CastError'){
+                ctx.throw(400,'id不存在')
+            }else{
+                ctx.throw(500,'服务器内部错误')
+            }
+        })
+        ctx.body = {
+            success: true,
+            article: article
+        }
+    }
+
+    static async deleteArticle(ctx){
+        const id = ctx.params.id;
+        const article = await ArticleModel.findByIdAndRemove(id).catch(err=>{
+            if(err.name === 'CastError'){
+                ctx.throw(400,'id不存在')
+            }else{
+                ctx.throw(500,'服务器错误')
+            }
+        });
+        ctx.body = {
+            success: true
         }
     }
 }

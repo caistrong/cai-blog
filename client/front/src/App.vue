@@ -21,6 +21,8 @@ export default {
 </script>
 
 <style lang="stylus">
+@import "./assets/stylus/themecolor.styl"
+
 #app
   display flex
   flex-direction column
@@ -31,5 +33,11 @@ export default {
   text-align: center
   color: #2c3e50
   margin-top: 20px
+a
+  text-decoration none 
+  font-weight bold
+  color secondary-color
+a:hover
+  background primary-color
 </style>
 

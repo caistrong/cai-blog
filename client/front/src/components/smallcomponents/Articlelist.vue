@@ -1,14 +1,13 @@
 <template>
-    <div>
-        <button @click="getContent">获取</button>
+    <div class="wrap">
         <ul v-for="article in articlesArr" v-bind:key="article.id">
-            <li>{{article.content}}</li>
-            <p>{{article.createTime}}</p>
+            <Articleblock v-bind:article="article"></Articleblock>
         </ul>
     </div>
 </template>
 <script>
 import store from '@/store'
+import Articleblock from './Articleblock'
 
 import {mapGetters,mapActions} from 'vuex'
 
@@ -23,16 +22,21 @@ export default {
         ...mapActions([
             'getAllArticles'
         ]),
-        getContent(){
-            console.log('点击事件触发')
-            store.dispatch('getAllArticles')
-        }
+  },
+  components:{
+      Articleblock
+  },
+  mounted(){
+      store.dispatch('getAllArticles')
   }
 }
 </script>
 <style lang="stylus" scoped>
-div
-    flex 3
+.wrap
+    display flex
+    flex-direction column
+    flex 4
     height 600px
-    background #ebeb5f
+    ul 
+        padding 0
 </style>

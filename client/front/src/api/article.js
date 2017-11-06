@@ -7,5 +7,8 @@ import Axios from 'axios'
 export default {
     getAllArticles(){
         return Axios.get('http://127.0.0.1:8889/api/articles')
+    },
+    getArticle(id){
+        return Axios.get('http://127.0.0.1:8889/api/articles/'+id)
     }
 }

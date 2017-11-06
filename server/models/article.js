@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 
 const articleSchema = new Schema({
     title:String,
+    summary:String,
     content:String,
     publish:{
         type:Boolean,

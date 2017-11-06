@@ -34,12 +34,7 @@ header
             display inline
             list-style none
             a
-                font-weight bold
-                padding 10px
-                color secondary-color 
-                text-decoration none
-            a:hover
-                background primary-color
+                padding 5px
     h1 
         display inline
     img
