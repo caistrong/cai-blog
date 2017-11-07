@@ -7,7 +7,7 @@
 </template>
 <script>
 import store from '@/store'
-import Articleblock from './Articleblock'
+import Articleblock from './smallcomponents/Articleblock'
 
 import {mapGetters,mapActions} from 'vuex'
 

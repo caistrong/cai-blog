@@ -1,13 +1,13 @@
 <template>
     <header>
         <div @click="GotoHello">
-            <img src="../assets/logo.png"></img>
+            <img src="../../assets/logo.png"></img>
             <h1>小葱</h1>
         </div>
 
         <ul>
-            <li><router-link to="/Blog"><span>博客</span></router-link></li>
-            <li><router-link to="/About"><span>关于</span></router-link></li>
+            <li><router-link :to="{name:'Articlelist'}"><span>博客</span></router-link></li>
+            <li><router-link :to="{name:'About'}"><span>关于</span></router-link></li>
         </ul>
     </header>
 </template>
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-@import "../assets/stylus/themecolor.styl"
+@import "../../assets/stylus/themecolor.styl"
 header
     
     display flex

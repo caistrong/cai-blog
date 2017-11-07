@@ -30,7 +30,7 @@ export default {
 @import "../../assets/stylus/themecolor.styl"
 
 .block
-    box-shadow 0 0 5px black
+    box-shadow 0 0 5px primary-color
     border-radius 5px
     display flex
     flex-direction column

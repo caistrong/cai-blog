@@ -1,17 +1,25 @@
 <template>
     <div>
-        <Sidebar class="sidebar"></Sidebar>
-        <Articlelist class="articlelist"></Articlelist>
+        <Top></Top>
+        <!-- <Sidebar class="sidebar"></Sidebar> -->
+        <router-view></router-view>
+        <!-- <Articlelist class="articlelist"></Articlelist> -->
+        <Footer></Footer>
     </div>
 </template>
 <script>
-import Sidebar from './smallcomponents/Sidebar.vue'
-import Articlelist from './smallcomponents/Articlelist.vue'
+import Top from './smallcomponents/Top.vue'
+import Footer from './smallcomponents/Footer.vue'
+
+// import Sidebar from './smallcomponents/Sidebar.vue'
+import Articlelist from './Articlelist.vue'
 
 export default {
   name:'Blog',
   components:{
-      Sidebar,
+      Top,
+      Footer,
+    //   Sidebar,
       Articlelist
   }
 }
@@ -19,5 +27,6 @@ export default {
 <style lang="stylus" scoped>
 div
     display flex
+    flex-direction column
 
 </style>
