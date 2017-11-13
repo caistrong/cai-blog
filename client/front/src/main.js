@@ -4,10 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-//以下这三行等到需要复用element-ui的组件时再使用
-// import {Button,Select} from 'element-ui'
-// Vue.component(Button.name,Button)
-// Vue.component(Select.name,Select)
+// 以下这三行等到需要复用element-ui的组件时再使用
+import {Container,Aside,Main,Header} from 'element-ui'
+Vue.component(Container.name,Container)
+Vue.component(Aside.name,Aside)
+Vue.component(Main.name,Main)
+Vue.component(Header.name,Header)
 
 import store from './store'
 

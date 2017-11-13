@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style lang="stylus">
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
 @import "./assets/stylus/themecolor.styl"
 body
     margin 0

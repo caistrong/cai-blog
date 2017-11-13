@@ -26,7 +26,7 @@ export default {
   components:{
       Articleblock
   },
-  mounted(){
+  created(){
       store.dispatch('getAllArticles')
   }
 }

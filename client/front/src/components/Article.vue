@@ -26,7 +26,7 @@ export default {
         'getArticle'
       ])
   },
-  mounted(){
+  created(){
     store.dispatch('getArticle',this.$route.params.id)
     console.log('mounted 钩子ok')
   }

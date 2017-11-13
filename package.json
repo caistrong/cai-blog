@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/caistrong/cai-blog#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.1.0",

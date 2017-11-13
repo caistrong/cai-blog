@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import About from '@/components/About'
+
+import Admin from '@/admin/Admin'
+import AdminArticle from '@/admin/AdminArticle'
+
 import Blog from '@/components/Blog'
+import About from '@/components/About'
 import Article from '@/components/Article'
 import Articlelist from '@/components/Articlelist'
 //大坑！！！！！
@@ -36,6 +40,18 @@ export default new Router({
           path:'Article/:id',
           name:'Article',
           component: Article
+        }
+      ]
+    },
+    {
+      path:'/Admin',
+      name:'Admin',
+      component:Admin,
+      children:[
+        {
+          path:'Article/:id',
+          name:'AdminArticle',
+          component:AdminArticle
         }
       ]
     }
