@@ -1,10 +1,14 @@
 <template>
-  <h1>{{article.title}}</h1>
+    <div>
+        <Articletitle :title="article.title"></Articletitle>
+        <Mdeditor></Mdeditor>
+    </div>
 </template>
 
 <script>
 import store from '@/store'
-
+import Articletitle from './smallcomponets/Articletitle'
+import Mdeditor from './smallcomponets/Mdeditor'
 import {mapGetters,mapActions} from 'vuex'
 
 export default {
@@ -12,6 +16,10 @@ export default {
       ...mapGetters([
         'article'
       ])
+  },
+  components:{
+      Articletitle,
+      Mdeditor
   },
   methods:{
       ...mapActions([

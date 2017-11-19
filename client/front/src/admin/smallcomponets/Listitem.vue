@@ -19,10 +19,15 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../assets/stylus/themecolor.styl';
+
 li
+    width 80%
     list-style none
-    border 2px solid #999
-li:visited
-    background red
+    border-bottom 1px dotted #aaa
+    cursor pointer
+li:hover
+    background-color primary-color
+
 
 </style>
