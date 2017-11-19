@@ -31,7 +31,8 @@
     "koa-static": "^4.0.1",
     "koa2-cors": "^2.0.3",
     "moment": "^2.19.1",
-    "mongoose": "^4.12.4"
+    "mongoose": "^4.12.4",
+    "simplemde": "^1.11.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
